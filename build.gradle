@@ -2,35 +2,36 @@ import org.apache.tools.ant.filters.ReplaceTokens
 
 plugins {
   id "com.github.hierynomus.license" version "0.14.0"
-  id "java"
+  id "com.xebialabs.xl.docker" version "1.1.0"
+  id 'nebula.release' version '6.0.0'
 }
 
-repositories {
-  mavenLocal()
-  mavenCentral()
-  maven {
-    url 'https://dist.xebialabs.com/public/maven2'
-  }
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'maven'
+
+xlDocker {
+  compileImage = 'xebialabsunsupported/xlr_dev_compile'
+  compileVersion = '8.6.1'
+  runImage = 'xebialabsunsupported/xlr_dev_run'
+  runVersion = '8.6.1'
+  runPortMapping = '15516:5516'
 }
 
-dependencies {
+if (!project.hasProperty('release.scope')) {
+  project.ext['release.scope'] = 'patch'
 }
 
-version = "1.0.0"
-
-// sourceCompatibility = 1.7
-// targetCompatibility = 1.7
-
-processResources.configure {
-  filter ReplaceTokens, tokens: [
-    'project.version': version.toString(),
-    'project.name'   : rootProject.name
-  ]
+if (!project.hasProperty('release.useLastTag')) {
+  project.ext['release.useLastTag'] = true
 }
+
 
 license {
-  header rootProject.file('License.md')
+  header rootProject.file('LICENSE.md')
   strictCheck false
   ext.year = Calendar.getInstance().get(Calendar.YEAR)
   ext.name = 'XEBIALABS'
+  excludes(["**/*.json", "**/*.min.js"])
 }

@@ -5,9 +5,9 @@ deploy:
   api_key:
     secure: mPUl1V8JzrxD6Y2aECfIcJilXQPVRQrEIfkMGQKqnK158yC7IwJAzBvR3RGnAuChS56NMMYp3VPV7OmO5lzvMpJKfMT9ssU55k1YhuZY6xEtFNGfD57w/hs61XdHIxs++FVsyrXiKly4mfQS/OS9M7AtrOyGC86gWfPpLEjUPPgweJ2bDWMy17iykmvS0lHf5SqSUbPg8bH0marVR4EPk5TO2vY2OL9wRps5T3N3dbSrtyMIyEU/tBCfg2loGBvpbXTYvdiOulX5myj2U9mepHDEitaxKqgXltZ+ChVwli4m6VhL7W8wQcI4LlU8DLRiBopCj3tT0qOIKbu+Nu5ZzH0BFRN1W0TXsh0LVfT+RpRQHykUrw50CJHV5EC59faQ0i0OFNWFFuKEAOWJXwyboG4Qu6hk9Z2zazKoj3Je4+N3toowsVSjFT8/tw1UMm8ILHxe7p7/vOqSICU24m6v4uShMmlHk/KAAxD54rJD0cgGBKyH4EZSMofjKUPhPaFrw+y1K2x/wJN7PnfBPtL7Lvj6Z/J1UKk/8p0UkIKexoQmlcVCnAaTvvS39s8acYSbRk8R2eYRnxCdnqbTUS/rfQQzHEPz1Z3lMaqYDiJXGq5tVjgPpTRKKwvDhTKVEOVTkg9m67YUg+G5CGmopw9q6VOEKfVkPcHfteqqao727Ls=
   file_glob: true
-    file: build/libs/*
-    skip_cleanup: true
-    on:
-      all_branches: true
-      tags: true
-      repo: xebialabs-community/xlr-dashboard-tile-plugin
+  file: build/libs/*
+  skip_cleanup: true
+  on:
+    all_branches: true
+    tags: true
+    repo: xebialabs-community/xlr-dashboard-tile-plugin

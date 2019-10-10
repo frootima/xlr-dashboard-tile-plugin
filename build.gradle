@@ -29,7 +29,7 @@ if (!project.hasProperty('release.useLastTag')) {
 
 
 license {
-  header rootProject.file('LICENSE.md')
+  header rootProject.file('License.md')
   strictCheck false
   ext.year = Calendar.getInstance().get(Calendar.YEAR)
   ext.name = 'XEBIALABS'

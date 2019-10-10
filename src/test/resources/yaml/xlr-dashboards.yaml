@@ -1,0 +1,67 @@
+---
+apiVersion: xl-release/v1
+kind: Templates
+spec:
+- directory: generic
+  children:
+  - name: demo
+    type: xlrelease.BlankDashboard
+    owner: admin
+    tiles:
+    - name: Pie Chart
+      type: dashboardtile.PieChartTile
+      width: 2
+      height: 2
+      row: 0
+      col: 0
+      keySet:
+        Sharon: "8"
+        Rick: "10"
+        David: "5"
+    - name: Line Chart
+      type: dashboardtile.LineChartTile
+      width: 3
+      height: 2
+      row: 0
+      col: 2
+      keySet:
+      - Jan
+      - Feb
+      - Mar
+      - Apr
+      - May
+      - Jun
+      - Jul
+      - Aug
+      - Sep
+      - Oct
+      - Nov
+      - Dec
+      valueSet:
+      - "10"
+      - "20"
+      - "30"
+      - "15"
+      - "25"
+      - "35"
+      - "10"
+      - "10"
+      - "11"
+      - "12"
+      - "12"
+      - "14"
+    - name: Key-Value Table
+      type: dashboardtile.KeyValueTableTile
+      width: 3
+      row: 2
+      col: 2
+      keySet:
+        1: One
+        3: Three
+        2: Two
+    - name: Guage Chart
+      type: dashboardtile.GuageChartTile
+      width: 2
+      height: 2
+      row: 2
+      col: 0

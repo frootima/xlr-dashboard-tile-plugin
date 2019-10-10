@@ -22,10 +22,12 @@
       window.addEventListener("xlrelease.load", function () {
 
               window.xlrelease.queryTileData(function (response) {
-                  var data = response.data.data;
+                  data = response.data.data;
                   theTable = "<table width='90%' >"
-                  for ( var key in data ) {
-                    theTable = theTable + "<tr><th>" + key + "</th><td>" + data[key] + "</td></tr>"
+                  theTable = theTable + "<tr><th>" + data.col1 + "</th>"
+                  theTable = theTable + "<th>" + data.col2 + "</th></tr>"
+                  for ( var key in data.keyset ) {
+                    theTable = theTable + "<tr><th>" + key + "</th><td>" + data.keyset[key] + "</td></tr>"
                   }
                   theTable = theTable + "</table>"
                   $("#mytable").html( theTable );

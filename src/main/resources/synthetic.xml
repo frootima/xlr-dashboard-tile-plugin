@@ -16,7 +16,7 @@
            xsi:schemaLocation="http://www.xebialabs.com/deployit/synthetic synthetic.xsd">
 
    <type type="dashboardtile.KeyValueTableTile" label="Key Value Table" extends="xlrelease.Tile">
-
+      <property default="release,folder,global" hidden="true" name="supportedScopes" kind="list_of_string"/>
       <!-- Path to the HTML template of the dashboard view of the tile -->
       <property name="uri" hidden="true" default="dashboardtileweb/KeyValueTable-view.html" />
       <!-- Title of the tile, this property is predefined in the parent type, but here you override its default value -->
@@ -28,12 +28,16 @@
       <property name="maxCacheEntries"   kind="integer" default="500"   description="Maximum cache entries."/>
 
       <!-- Tile configuration properties -->
-      <property name="xlrVariableName" category="input" required="true" default="myTable"
-                description="The variable name of a key/value map in this template" />
+      <property name="col1"   category="input" required="true" default="Col1"
+                description="Column 1 name" />
+      <property name="col2"   category="input" required="true" default="Col2"
+                description="Column 2 name" />
+      <property name="keySet" category="input" kind="map_string_string" required="true"
+                description="The variable name of a List of keys" />
    </type>
 
    <type type="dashboardtile.ListTableTile" label="List Table" extends="xlrelease.Tile">
-
+      <property default="release,folder,global" hidden="true" name="supportedScopes" kind="list_of_string"/>
       <!-- Path to the HTML template of the dashboard view of the tile -->
       <property name="uri" hidden="true" default="dashboardtileweb/ListTable-view.html" />
       <!-- Title of the tile, this property is predefined in the parent type, but here you override its default value -->
@@ -50,7 +54,7 @@
    </type>
 
    <type type="dashboardtile.TaskTableTile" label="List Table" extends="xlrelease.Tile">
-
+      <property default="release,folder,global" hidden="true" name="supportedScopes" kind="list_of_string"/>
       <!-- Path to the HTML template of the dashboard view of the tile -->
       <property name="uri" hidden="true" default="dashboardtileweb/TaskTable-view.html" />
       <!-- Title of the tile, this property is predefined in the parent type, but here you override its default value -->
@@ -62,12 +66,12 @@
       <property name="maxCacheEntries"   kind="integer" default="500"   description="Maximum cache entries."/>
 
       <!-- Tile configuration properties -->
-      <property name="xlrTaskType" category="input" required="true" default="xlrelease.Task"
-                description="The variable name of a List in this template" />
+      <property name="keySet" category="input" kind="map_string_string" required="true"
+                description="The variable name of a List of keys" />
    </type>
 
    <type type="dashboardtile.LineChartTile" label="Line Chart" extends="xlrelease.Tile">
-
+      <property default="release,folder,global" hidden="true" name="supportedScopes" kind="list_of_string"/>
       <!-- Path to the HTML template of the dashboard view of the tile -->
       <property name="uri" hidden="true" default="dashboardtileweb/LineChart-view.html" />
       <!-- Title of the tile, this property is predefined in the parent type, but here you override its default value -->
@@ -86,7 +90,7 @@
    </type>
 
    <type type="dashboardtile.PieChartTile" label="Pie Chart" extends="xlrelease.Tile">
-
+      <property default="release,folder,global" hidden="true" name="supportedScopes" kind="list_of_string"/>
       <!-- Path to the HTML template of the dashboard view of the tile -->
       <property name="uri" hidden="true" default="dashboardtileweb/PieChart-view.html" />
       <!-- Title of the tile, this property is predefined in the parent type, but here you override its default value -->
@@ -103,7 +107,7 @@
    </type>
 
    <type type="dashboardtile.GuageChartTile" label="Guage Chart" extends="xlrelease.Tile">
-
+      <property default="release,folder,global" hidden="true" name="supportedScopes" kind="list_of_string"/>
       <!-- Path to the HTML template of the dashboard view of the tile -->
       <property name="uri" hidden="true" default="dashboardtileweb/GuageChart-view.html" />
       <!-- Title of the tile, this property is predefined in the parent type, but here you override its default value -->

@@ -1,4 +1,4 @@
-# XL [Deploy|Release] [Description|Interface] plugin v1.0.0
+# XL Release] Dashboard Tile plugin
 
 [![Build Status][xlr-dashboard-tile-plugin-travis-image]][xlr-dashboard-tile-plugin-travis-url]
 [![License: MIT][xlr-dashboard-tile-plugin-license-image]][xlr-dashboard-tile-plugin-license-url]
